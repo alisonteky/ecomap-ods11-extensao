@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoMap - ODS 11</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>🌍 EcoMap</h1>
+    <p>Plataforma colaborativa para cidades e comunidades sustentáveis (ODS 11)</p>
+  </header>
+
+  <div class="container">
+    <div id="map" style="height: 500px;"></div>
+
+    <div class="sidebar">
+      <h2>Adicionar Ponto Sustentável</h2>
+      <form id="formPonto">
+        <input type="text" id="nome" placeholder="Nome do local" required>
+        <select id="tipo">
+          <option value="reciclagem">♻️ Reciclagem</option>
+          <option value="parque">🌳 Parque/Area Verde</option>
+          <option value="ciclovia">🚲 Ciclovia</option>
+          <option value="problema">⚠️ Problema Ambiental</option>
+        </select>
+        <input type="text" id="descricao" placeholder="Descrição" required>
+        <button type="submit">Adicionar ao Mapa</button>
+      </form>
+
+      <h3>Pontos cadastrados</h3>
+      <ul id="listaPontos"></ul>
+
+      <h3>Dicas de Sustentabilidade</h3>
+      <ul>
+        <li>Separe o lixo corretamente</li>
+        <li>Use transporte público ou bicicleta</li>
+        <li>Plante árvores na sua rua</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
